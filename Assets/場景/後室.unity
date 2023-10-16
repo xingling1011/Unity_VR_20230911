@@ -25095,7 +25095,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3125625400045265162, guid: 0ba3dbfcdf462b34ab0fee7ae7b5f053, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3125625400045265162, guid: 0ba3dbfcdf462b34ab0fee7ae7b5f053, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26867,6 +26867,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3789845967701493961, guid: 29f0d0a863fce49448db403e1a1337c5, type: 3}
   m_PrefabInstance: {fileID: 881977191}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &882288238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 882288239}
+  m_Layer: 0
+  m_Name: "\u5B50\u5F48\u4F4D\u5B50"
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &882288239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882288238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.492, y: 0.5204, z: -0.0855}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &886400581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35931,7 +35962,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &1189565407
 MonoBehaviour:
@@ -57970,7 +58001,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: 3d87184bf4725b841b26693d2234fffd, type: 3}
       propertyPath: m_Name
-      value: M1911 Handgun
+      value: "\u624B\u69CD"
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 3d87184bf4725b841b26693d2234fffd, type: 3}
       propertyPath: m_RootOrder
@@ -58031,6 +58062,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100004, guid: 3d87184bf4725b841b26693d2234fffd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1913907636}
+    - targetCorrespondingSourceObject: {fileID: 100004, guid: 3d87184bf4725b841b26693d2234fffd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1913907640}
   m_SourcePrefab: {fileID: 100100000, guid: 3d87184bf4725b841b26693d2234fffd, type: 3}
 --- !u!1 &1913907635 stripped
 GameObject:
@@ -58058,6 +58092,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1913907640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913907635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6bda7b5f76af84ea0c0ecb90ff24b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magazineCount: 0
+  bulletTotal: 0
+  bulletCurrent: 0
 --- !u!1001 &1915915929
 PrefabInstance:
   m_ObjectHideFlags: 0
