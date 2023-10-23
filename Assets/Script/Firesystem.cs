@@ -1,7 +1,4 @@
-using UnityEditor.Build.Content;
 using UnityEngine;
-using UnityEngine.InputSystem.Processors;
-using UnityEngine.Windows;
 
 public class Firesystem : MonoBehaviour
 {
@@ -44,7 +41,7 @@ public class Firesystem : MonoBehaviour
     {
         //print("<color=yellow>更新事件</color>");
 
-       if (UnityEngine.Input.GetKeyDown(KeyCode.Mouse0)) 
+       if (Input.GetKeyDown(KeyCode.Mouse0)) 
         {
             Instantiate(prefabBullet);
         }
