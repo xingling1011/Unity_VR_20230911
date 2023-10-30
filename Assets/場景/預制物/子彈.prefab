@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 1319cfeb42068a446bc5d43ef1562670, type: 3}
       propertyPath: m_Name
-      value: "\u5B50\u5F48 Variant"
+      value: "\u5B50\u5F48"
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1319cfeb42068a446bc5d43ef1562670, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1319cfeb42068a446bc5d43ef1562670, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,6 +66,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1319cfeb42068a446bc5d43ef1562670, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3412194297697329558}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 1319cfeb42068a446bc5d43ef1562670, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4833948741490080415}
   m_SourcePrefab: {fileID: 100100000, guid: 1319cfeb42068a446bc5d43ef1562670, type: 3}
 --- !u!1 &2060947726783859920 stripped
 GameObject:
@@ -122,3 +125,15 @@ CapsuleCollider:
   m_Height: 0.0359
   m_Direction: 2
   m_Center: {x: 0, y: 0.000000014435498, z: 0.0093839355}
+--- !u!75 &4833948741490080415
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060947726783859920}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 0, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 300}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
