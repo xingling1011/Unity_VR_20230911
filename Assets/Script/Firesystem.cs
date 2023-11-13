@@ -1,8 +1,9 @@
-using Unity.VisualScripting;
+//using System;
 using UnityEngine;
 
 public class Firesystem : MonoBehaviour
 {
+    #region 資料
     [Header("彈夾子彈數量"), Range(0, 10)]
     public int magazineCount = 7;
     [Header("子彈總數"), Range(20, 200)]
@@ -18,31 +19,38 @@ public class Firesystem : MonoBehaviour
     public string parFire = "觸發開槍";
     [Header("動畫控制器")]
     public Animator ani;
+    [Header("音效來源")]
+    public AudioSource aud;
+    [Header("開槍音效")]
+    public AudioClip soundFire;
+    #endregion
+    /*
+        public bool openDoor = true;
+        public bool isDead = false;
 
-    public bool openDoor = true;
-    public bool isDead = false;
-
-    private void Awake()
-    {
-        //print("<color=green>喚醒事件</color>");
-        
-        
-     }
-
-    private void Start()
-    {
-        //print("<color=red>開始事件</color>");
-
-        if (openDoor) 
+        private void Awake()
         {
-            print("已經開門");
-        }
+            //print("<color=green>喚醒事件</color>");
 
-        if (isDead) 
+
+         }
+
+        private void Start()
         {
-            print("已經死亡");
+            //print("<color=red>開始事件</color>");
+
+            if (openDoor) 
+            {
+                print("已經開門");
+            }
+
+            if (isDead) 
+            {
+                print("已經死亡");
+            }
+
         }
-    }
+    */
     private void Update()
     {
         //print("<color=yellow>更新事件</color>");
@@ -51,6 +59,9 @@ public class Firesystem : MonoBehaviour
         {
             ani.SetTrigger(parFire);
             Instantiate(prefabBullet,pointSpawnBullet.position, pointSpawnBullet.rotation );
+
+            float volume = Random.Range(0.8f, 3.2f);
+            aud.PlayOneShot(soundFire,volume);
         }
 
         
