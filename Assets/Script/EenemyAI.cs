@@ -2,6 +2,7 @@
 //using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 public class EenemyAI : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class EenemyAI : MonoBehaviour
     public float stopDistance = 1;
     [Header("動畫控制器")]
     public Animator ani;
+    [Header("延遲造成傷害"), Range(0, 5)]
+    public float delayDamage = 0.6f;
+    [Header("攻擊冷卻"), Range(0, 5)]
+    public float cd = 2.1f;
 
     private string parMove = "移動";
     private string parAtack = "攻擊";
@@ -48,9 +53,26 @@ public class EenemyAI : MonoBehaviour
             
             //不能攻擊
             canAttack = false;
+
+            StartCoroutine(Attack());
         }
 
     }
-}
+
+    private IEnumerator Attack()
+    {
+        //播放攻擊動畫
+        ani.SetTrigger(parAtack);
+        //等0.4秒
+        yield return new WaitForSeconds(0.4f);
+        //造成玩家傷害
+        print("<color=#f69>造成玩家傷害!</color>");
+        //等2.1秒
+        yield return new WaitForSeconds(2.1f);
+        //恢復可攻擊狀態
+        canAttack = true;
+    }
+
+    }
 
 
