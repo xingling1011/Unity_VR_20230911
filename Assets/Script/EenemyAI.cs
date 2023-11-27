@@ -17,6 +17,9 @@ public class EenemyAI : MonoBehaviour
     public Animator ani;
 
     private string parMove = "移動";
+    private string parAtack = "攻擊";
+    private bool canAttack = true;
+
     private void Awake()
     {
         //代理器的移動速度 = 移動速度
@@ -32,5 +35,22 @@ public class EenemyAI : MonoBehaviour
         float move = agent.velocity.magnitude;
         //動畫控制器.設定浮點數(浮點數參數，浮點數值)
         ani.SetFloat(parMove, move);
+
+        //print($"<color=#f50>移動速度:{agent.velocity.magnitude}</color>");
+        float distance = Vector3.Distance(transform.position, player.position);
+        //print($"<color=#96f>距離:{distance}</color>");
+
+        //如果移動速度 = 0 並且可以攻擊 就 攻擊 
+        //canAttack == true 可以簡寫成 canAttack
+        if (agent.velocity.magnitude==0 && canAttack && distance < stopDistance)
+        {
+            ani.SetTrigger(parAtack); 
+            
+            //不能攻擊
+            canAttack = false;
+        }
+
     }
 }
+
+
