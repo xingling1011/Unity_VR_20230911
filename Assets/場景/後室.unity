@@ -20303,12 +20303,12 @@ GameObject:
   - component: {fileID: 680422367}
   - component: {fileID: 680422366}
   m_Layer: 0
-  m_Name: 0000
+  m_Name: "\u5354\u540C\u7A0B\u5E8F"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &680422366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37879,6 +37879,8 @@ MonoBehaviour:
   moveSpeed: 2.5
   stopDistance: 2.5
   ani: {fileID: 1241919372}
+  delayDamage: 0.6
+  cd: 2.1
 --- !u!95 &1241919372 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2066896392029128874, guid: 45288819fde2143449a96207b14db0bb, type: 3}
