@@ -30,7 +30,13 @@ namespace Ling
             //  更新圖片介面
             imageHP.fillAmount = hp/hpMax;
         }
+        protected override void Dead()
+        {
+            base.Dead();
+            GameManager.instance.StartShowFinal("Game Over");
+        }
     }
     
+   
 }
 
